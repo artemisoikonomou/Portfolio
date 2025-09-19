@@ -1,0 +1,325 @@
+span{
+    font-weight: bold;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+
+/* to background image επανω ξεκιναει by default top-left */
+.image-container img{
+    position: relative;
+    height: 530px;
+   
+}
+
+/* to text που υπαρχει πανω στο background image σχετιζεται το position του background image  */
+/* επισης το  text-overlay περιεχει ολο το κειμενο και την εικονα που βρισκονται επανω στο image*/
+.text-overlay{
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.text-overlay h1{
+
+    color:white;
+    font-family: "Dancing Script", serif;
+    font-size: 70px;
+    font-weight: bold;
+
+}
+
+.text-overlay h2{
+    color: white;
+    font-family: "Delius", cursive;
+    font-weight: 100;
+    font-size: 20px;
+
+}
+
+.text-overlay img{
+     height: 180px;
+}
+
+
+
+/* HERO SECTION */
+
+
+.image-me img{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 30px 20px 0px 0px;
+
+}
+
+.words-for-me p{
+    text-align: left;
+    font-family: "Caveat", serif;
+    font-size: 20px;
+    max-width: 600px; 
+    padding-bottom: 15px;
+    
+}
+
+
+
+/* RESUME SECTION */
+
+
+.information_education{
+    text-align: left;
+    max-width: 600px;
+    font-family: "Caveat", serif;
+    font-size: 20px;
+    padding: 10px 20px ;
+    
+}
+
+.information_education h3{
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+.list ol {
+    margin-left: 200px; 
+}
+
+
+
+/* PERSONAL WORK*/
+
+.personal_work_section{
+    text-align: left;
+    margin: 20px 0px;
+    max-width: 600px;
+    font-family: "Caveat", serif;
+    font-size: 20px;
+}
+
+.personal_work_section h3{
+    text-align: center;
+}
+
+
+video{
+    max-width: 600px;
+    height:400px;
+    max-width: 100%;
+}
+
+
+
+
+/* ABOUT ME SECTION*/
+.about_me_section{
+    background-color:#d2c7ed;
+}
+
+
+.about_me_section h3{
+    text-align: center;
+    font-family: "Caveat", serif;
+    padding-top: 30px;
+}
+
+.text-top{
+    font-family: "Caveat", serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.text-bottom{
+    font-family: "Caveat", serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+/* CONTACT ME SECTION */
+
+.contact_me h3{
+    text-align: center;
+}
+/* ayto einai to kouti pou periexei tis plirofories mou */
+.my_personal_information{
+    border: 3px solid #d2c7ed;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px 0px 20px 100px;
+}
+
+.contact_me{
+    text-align: left;
+    font-family: "Caveat", serif;
+    font-size: 20px;
+    padding: 20px 0px 30px 0px;
+}
+
+
+/*FOOTER */
+
+footer {
+    background-color: #d2c7ed;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-family: "Volkhov", serif;
+    font-size: 17px;
+    margin: 20px 0px 0px 0px;
+  }
+
+
+
+  /* CONTAINERS */
+.image-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.resume-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#d2c7ed;
+}
+
+
+.personal_work-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-p p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center; 
+    margin-bottom: 50px; 
+    font-family: "Caveat", serif;
+    font-size: 20px;
+ 
+}
+
+.container_about_me{
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+    
+    gap: 50px; 
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.container_about_me_item{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+}
+
+
+.contact_me-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+
+
+@media(max-width:1135px){
+
+    .image-container{
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        justify-items: center;
+    }
+    
+    
+    .hero-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    
+    .resume-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#d2c7ed;
+    }
+    
+
+    .list ol {
+        margin-left: 70px; 
+    }
+    
+    .personal_work-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px;
+    }
+    
+    .container_about_me{
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px; 
+        margin-top: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .container_about_me_item{
+        justify-content: center;
+        flex-direction: column;
+    
+    }
+    
+    
+    .contact_me-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .my_personal_information{
+        max-width: 400px;
+        
+        padding-left: 50px;
+    }
+}

@@ -1,0 +1,502 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+nav.navbar {
+  height: 150px;
+  transition: height 0.3s ease;
+}
+
+
+.nav-link:hover {
+    text-decoration: underline; /* Optional */
+}
+
+.dropdown-toggle:hover{
+    text-decoration: underline; /* Optional */
+}
+
+.dropdown-menu{
+    box-shadow: 1px 1px 12px 7px #e3e6ea;
+
+}
+
+ul.dropdown-menu li a.dropdown-item:hover {
+    color: #A0C4E2 !important;
+
+}
+
+/* HERO SECTION */
+
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-hero{
+    position: relative;
+}
+.parallelogram{
+    background-color: #BED6EB;
+    height: 20px;
+    margin-top: 270px;
+    transition: width 2s ease-in-out, opacity 0.5s ease-in-out, transform 2s ease-in-out;
+    position: absolute;
+    opacity: 0; /* Start as invisible */
+    width: 0;
+    transform: scaleX(1);
+}
+
+
+.left {
+    left: 0;
+    transform-origin: right center; 
+    position: absolute;
+  }
+  
+  .right {
+    right: 0;
+    transform-origin: left center; /* Start from the right side */
+    position: absolute;
+  }
+  
+.container-hero:hover .parallelogram {
+    width: 100px;
+    opacity: 0.5;
+    transform: scaleX(3.7); 
+    
+}
+
+
+.hero-box{
+    background-color: #BED6EB;
+    max-width: 1100px;
+    height: 470px;
+    margin-top: 250px;
+    border-radius: 25px;
+
+    font-family: "Markazi Text", serif;
+    color: white;
+    text-align: center;
+    padding: 70px 30px 70px 30px;
+    
+}
+
+.hero-box p{
+    font-size: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.hero-box h1{
+    font-size: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+img{
+    max-height: 150px;
+    max-width: 250px;
+    /* padding-top: 30px; */
+    /* padding-bottom: 30px; */
+}
+.container-hero .hero-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+@media(max-width:1383px){
+ .container-hero .hero-box{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        gap: 6px;
+    }
+
+    .hero-box{
+        margin: 250px 20px 0px 20px !important;
+    }
+
+    .hero-box p{
+        font-size: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+
+    }
+
+    .hero-box h1{
+        font-size: 30px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    img{
+        max-height: 150px;
+        max-width: 200px;
+        padding-bottom: 0px !important;
+    }
+}
+
+/* PROJECTS */
+
+
+
+h2{
+    text-align: center;
+    padding-top: 200px;
+    /* padding-bottom: 20px; */
+}
+
+
+
+.project{
+    height: 700px;
+    max-width: 500px ;
+    border-radius: 25px;
+    margin: 80px 0px;
+    padding: 60px 40px;
+    text-align: center;
+    border: 1px solid #BED6EB;
+    font-family: "Markazi Text", serif;
+    
+}
+
+.project:hover{
+    box-shadow: 1px 1px 12px 7px #e3e6ea;
+}
+
+
+.project p{
+    text-align: left;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.project li{
+    text-align: left;
+    font-size: 20px;
+}
+
+
+.project button{
+
+    margin-top: 20px;
+    height: 50px;
+    width: 150px;
+
+    background-color: #BED6EB;
+    color: white;
+    font-size: 20px;
+    border-style: none;
+
+}
+
+.project button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+
+.project button span:after {
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    /* right: -20px; */
+    transition: 0.5s;
+}
+
+
+.project button:hover span {
+    padding-right: 25px;
+}
+
+.project button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* .permalist{
+    height: 750px;
+} */
+
+.container-project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+@media(max-width:1500px){
+    .container-project{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 50px;
+        margin: 0px 30px 0px 30px;
+    }
+
+    .project{
+        height: 600px;
+    }
+
+    h2{
+       font-size: 20px;
+    }
+
+
+
+    .project p{
+
+        font-size: 15px;
+    }
+
+    .project li{
+        font-size: 15px;
+    }
+
+
+    .project button{
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width:438px){
+        .project{
+        height: 750px;
+    }
+}
+
+
+/* FOOTER */
+
+footer{
+
+    background-color: #A0C4E2;
+    text-align: center;
+    color: white;
+    padding: 20px 0 ;
+    font-family: "Volkhov", serif;
+    font-size: 0.9rem;
+}
+
+/* .footer-container{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+} */
+
+
+
+@media(max-width:1383px){
+    .footer-container{
+           /* flex-direction: column; */
+           align-items: center;
+           justify-content: center;
+           padding: 15px;
+    }
+}
+
+/*------------------------------------------------------------------------------- ABOUT ME PAGE------------------------------------------------------------------------------------------------ */
+
+.container-about-me-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-box{
+    background-color: #BED6EB;
+    max-width: 1100px;
+    max-height: 470px;
+    margin-top: 250px;
+    border-radius: 25px;
+
+    font-family: "Markazi Text", serif;
+    color: white;
+    text-align: center;
+    padding: 70px 70px;
+
+    /* margin: 250px 70px 0px 70px; */
+    
+}
+
+.about-me-box p{
+    font-size: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.about-me-box h1{
+    font-size: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+.about footer{
+    background-color: #A0C4E2;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    font-family: "Volkhov", serif;
+    font-size: 0.9rem;
+   
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.container .about-me-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:1500px){
+    /* .container-about-me-box{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    } */
+
+    .about-me-box{
+        padding: 20px;
+        width: 350px ;
+        /* height: 350px; */
+        /* margin-top: 300px; */
+        margin: 200px 50px 50px 50px;
+
+    }
+    .about-me-box p{
+        /* padding: 8px; */
+        font-size: 16px;
+    }
+
+    .about-me-box h1{
+        font-size: 32px;
+        /* padding-top: 10px; */
+    }
+
+
+
+}
+/*------------------------------------------------------------------------------- CONTACT ME PAGE------------------------------------------------------------------------------------------------ */
+
+
+.page-wrapper {
+  flex: 1;
+}
+
+
+.container-contact-me-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-me-box{
+    background-color: #BED6EB;
+    max-width: 1100px;
+    height: 470px;
+    margin-top: 250px;
+    border-radius: 25px;
+
+    font-family: "Markazi Text", serif;
+    color: white;
+    text-align: center;
+    padding: 70px 70px;
+    
+}
+
+.contact-me-box p{
+    font-size: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    padding-top: 30px;
+
+}
+
+.contact-me-box h1{
+    font-size: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.about footer{
+    background-color: #A0C4E2;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    font-family: "Volkhov", serif;
+    font-size: 0.9rem;
+   
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Optional: Custom styles for the sidebar collapse */
+/* @media (max-width: 811px) {
+    .contact-me-box{
+    margin: 250px 40px 40px 40px;
+    max-width: 300px;
+    height: 300px;
+    padding: 20px;
+        
+    }
+
+    .contact-me-box p{
+    font-size: 17px;
+    padding-top: 20px;
+
+    }
+
+    .contact-me-box h1{
+        font-size: 40px;
+
+    }
+
+} */
+  
+@media(max-width:1500px){
+    .contact-me-box{
+        margin: 200px 40px 40px 40px;
+        max-width: 300px;
+        height: 300px;
+        padding: 20px;
+        
+    }
+
+    .contact-me-box p{
+    font-size: 17px;
+    padding-top: 20px;
+
+    }
+
+    .contact-me-box h1{
+        font-size: 40px;
+
+    }
+}

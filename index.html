@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barrio&family=Markazi+Text:wght@400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+ <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #A0C4E2; ">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation" style="color: white;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+        <ul class="navbar-nav  d-flex align-items-center">
+            <li class="nav-item">
+                <a class="nav-link active fs-5" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active fs-5" aria-current="page" href="./about.html">About me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active fs-5" aria-current="page" href="./contact.html">Contact me</a>
+            </li>
+    
+            
+            <div class="dropdown">
+                <a class="btn dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" style="color: white;">Projects</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./projects/movie-ranking.html">Movie-ranking</a></li>
+                    <li><a class="dropdown-item" href="./projects/my personal website/index.html">My personal website</a></li>
+                    <li><a class="dropdown-item" href="./projects/Omnifood-Project/content/index.html">Omnifood</a></li>
+                    
+                    <li><a class="dropdown-item" href="./projects/casino game/index.html">Forest of Riches</a></li>
+                    <li><a class="dropdown-item" href="./projects/library_project_everything/library_project_instructions.html">The Artemis Bookshelf</a></li>
+                    <li><a class="dropdown-item" href="./projects/permalist_project_everything/permalist_project_instructions.html">Permalist</a></li>
+
+                    <li><a class="dropdown-item" href="./projects/notes_project_everything/notes_project_instructions.html">Now I See</a></li>
+                </ul>
+            </div>
+            
+        </ul>
+    </div>
+    </div>
+ </nav>
+
+<!-- HERO -->
+<section class="hero-section ">
+
+    <div class="container-hero">
+
+        <!-- <div class="parallelogram left"></div> -->
+
+        <div class="hero-box ">
+            <h1><u>Hello, I'm Artemis</u></h1>
+            <p>
+                Part-time Web Developer, full-time code explorer. <br>
+                Join me as I debug my way through the wild world of web technologies (snacks included)!
+            </p>
+
+            <img src="./images/coding.gif" alt="hands coding">
+        </div>
+
+        <!-- <div class="parallelogram right"></div> -->
+
+    </div>
+</section>
+
+
+<!-- PROJECT SECTION -->
+
+ <section class="project-section">
+    <h2>My Projects</h2>
+    <div class="container-project">
+
+        <div class="project movie_ranking">
+            <h3>Best Movies According to Artemis: A Personal Movie Ranking</h3>
+            <p> <b>Description:</b> 
+                This project showcases a personal ranking of my top three favorite movies of all time. Each selection includes a brief synopsis, personal reflections on why the movie is 
+                a favorite, and a link to watch the trailer. The design emphasizes simplicity and clarity, making it easy for users to explore and enjoy the content.
+            </p> 
+
+            <p><b>Technologies Used:</b>
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ol></p>
+
+            <p><i>Discover some of my favorite films and see why they hold a special place in my heart.</i></p>
+            <a href="./projects/movie-ranking.html"> <button type="button"><span>See more</span></button></a>
+        </div>
+
+        <div class="project my_personal_website">
+            <h3>My Personal Website</h3>
+            <p> <b>Description:</b> 
+                This project represents a personal website designed to showcase my skills, interests, and accomplishments. The site includes sections such as a personal introduction, 
+                my qualifications, a showcase of my projects, and a contact form. The aesthetic is designed with soft, calming colors to create an inviting and engaging user experience.
+            </p> 
+
+            <p><b>Technologies Used:</b>
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ol></p>
+
+            <p><i>Explore this website to learn more about me and my work.</i></p>
+            <a href="./projects/my personal website/index.html"> <button type="button"><span>See more</span></button></a>
+        </div>
+
+        <div class="project omnifood">
+        <h3>Omnifood: Healthy Meal Subscription Service</h3>
+        
+        <p><b>Description:</b> 
+            Omnifood is a fictional meal delivery service website created during a guided web development seminar. While the design and concept were provided by the instructor, the project helped me apply key front-end development skills by building a responsive layout, practicing Flexbox and Grid, and improving visual design structure.
+        </p>
+
+        <p><b>Technologies Used:</b>
+            <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            </ol>
+        </p>
+
+        <p><i>This project was built under instruction as part of a training seminar. It served as a practical exercise in responsive web design and front-end fundamentals.</i></p>
+
+        <a href="./projects/Omnifood-Project/content/index.html">
+            <button type="button"><span>See more</span></button>
+        </a>
+        </div>
+
+
+    </div>
+
+    <div class="container-project">
+
+        <div class="project casino">
+            <h3>Forest of Riches</h3>
+            <p><b>Description:</b> 
+                Step into the lush world of "Forest of Riches," a jungle-themed slot game that invites you to explore the hidden treasures of the forest. Spin the reels to uncover fruits, bells, and other enchanting symbols as you journey deeper into this vibrant, green paradise. Each spin brings a new adventure, with a chance to discover big wins lurking beneath the canopy.
+            </p>
+        
+            <p><b>Technologies Used:</b>
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT</li>
+                </ol></p>
+        
+            <p><i>Experience the thrill of the forest and spin your way to riches!</i></p>
+            <a href="./projects/casino game/index.html"> 
+                <button type="button"><span>Play Now</span></button>
+            </a>
+        </div>
+
+        
+        <div class="project bookself">
+            <h3>The Artemis Bookshelf</h3>
+            <p><b>Description:</b> 
+                This project is a personal book journal web application designed to catalog and reflect on books I've read. It allows me to write reviews, rate books, and collect favorite quotes — all displayed in a visually calm and cozy interface inspired by personal reading nooks.
+            </p>
+        
+            <p><b>Technologies Used:</b>
+                <ol>
+                    <li>Express.js</li>
+                    <li>Node.js</li>
+                    <li>EJS (Embedded JavaScript Templates)</li> 
+                    <li>PostgreSQL (via pgAdmin 4)</li>  
+                    <li>CSS</li>
+                </ol></p>
+        
+            <p><i>Explore the HTML file to see a detailed visual walkthrough of the app, including its features and design choices.</i></p>
+            <a href="./projects/library_project_everything/library_project_instructions.html"> 
+                <button type="button"><span>See more</span></button>
+            </a>
+        </div>
+
+        
+        <div class="project permalist">
+            <h3>Permalist</h3>
+            <p><b>Description:</b> 
+                Permalist is a personalized to-do list app originally built during a seminar. I extended it beyond basic task management by adding progress tracking, note categorization, and personalized features to enhance daily productivity.
+            </p>
+        
+            <p><b>Technologies Used:</b>
+                <ol>
+                    <li>Express.js</li>
+                    <li>Node.js</li>
+                    <li>EJS (Embedded JavaScript Templates)</li>
+                    <li>PostgreSQL (via pgAdmin 4)</li>
+                    <li>CSS</li>
+                </ol></p>
+        
+            <p><i>Explore the HTML file to see a detailed visual walkthrough of the app, including its features and design choices.</i></p>
+            <a href="./projects/permalist_project_everything/permalist_project_instructions.html"> 
+                <button type="button"><span>See More</span></button>
+            </a>
+        </div>
+		
+		
+		
+
+    </div>
+	
+	<div class="container-project">
+
+
+        <div class="project nowisee">
+        <h3>Now I See</h3>
+        <p><b>Description:</b>  
+            Now I See is a reflective journal app designed to help users explore the thoughts behind their feelings. 
+            It offers a calm and simple space to quickly capture insights, organize reflections, and revisit them 
+            for personal growth and clarity.
+        </p>
+
+        <p><b>Technologies Used:</b>
+            <ol>
+            <li>Node.js </li>
+            <li>Express.js</li>
+            <li>EJS (Embedded JavaScript Templates)</li>
+            <li>PostgreSQL (via pgAdmin 4)</li>
+            <li>CSS</li>
+            </ol>
+        </p>
+
+        
+
+        <p><i>Explore the HTML file to see a detailed visual walkthrough of the app, including its features and design choices.</i></p>
+        <a href="./projects/notes_project_everything/notes_project_instructions.html">
+            <button type="button"><span>See More</span></button>
+        </a>
+        </div>
+
+
+    </div>
+
+
+ </section>
+
+<!-- Footer -->
+
+<section class="footer-section">
+
+    <footer class="footer-container">
+        <p>Turning ideas into reality with creative solutions 🖥️. © 2025 Artemis. All rights reserved.</p>
+    </footer>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+    // Select navbar and collapse div
+    const navbar = document.querySelector('nav.navbar');
+    const collapseMenu = document.getElementById('navbarCollapse');
+
+    collapseMenu.addEventListener('show.bs.collapse', () => {
+        // When menu opens, increase navbar height
+        navbar.style.height = '300px';  // set your desired expanded height
+    });
+
+    collapseMenu.addEventListener('hide.bs.collapse', () => {
+        // When menu closes, reset navbar height
+        navbar.style.height = '150px';  // original navbar height
+    });
+
+</script>
+
+</body>
+  
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barrio&family=Markazi+Text:wght@400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+ <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #A0C4E2; ">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation" style="color: white;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+        <ul class="navbar-nav  d-flex align-items-center">
+            <li class="nav-item">
+                <a class="nav-link active fs-5" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active fs-5" aria-current="page" href="./about.html">About me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active fs-5" aria-current="page" href="./contact.html">Contact me</a>
+            </li>
+    
+            
+            <div class="dropdown">
+                <a class="btn dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" style="color: white;">Projects</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./projects/movie-ranking.html">Movie-ranking</a></li>
+                    <li><a class="dropdown-item" href="./projects/my personal website/index.html">My personal website</a></li>
+                    <li><a class="dropdown-item" href="./projects/Omnifood-Project/content/index.html">Omnifood</a></li>
+                    
+                    <li><a class="dropdown-item" href="./projects/casino game/index.html">Forest of Riches</a></li>
+                    <li><a class="dropdown-item" href="./projects/library_project_everything/library_project_instructions.html">The Artemis Bookshelf</a></li>
+                    <li><a class="dropdown-item" href="./projects/permalist_project_everything/permalist_project_instructions.html">Permalist</a></li>
+
+                    <li><a class="dropdown-item" href="./projects/notes_project_everything/notes_project_instructions.html">Now I See</a></li>
+                </ul>
+            </div>
+            
+        </ul>
+    </div>
+    </div>
+ </nav>
+
+<div class="page-wrapper">
+
+
+<!-- ABOUT ME-->
+<section class="about-me-section ">
+
+  <div class="container-about-me-box">
+      <div class="about-me-box">
+        <h1><u>About Me</u></h1>
+        <p>My name is Artemis Economou and I am a graduate of the University of Piraeus, Department of Informatics. I studied in the period 2019-2023, and my thesis was on "DynamicPuzzle: An educational potential puzzle 
+          game". I am interested in the field of web developing and this is because upon finishing my school I realized that I wanted to work in a field that includes both the functionality of a program and its appearance for the user.</p>
+      </div>
+  </div>
+</section>
+
+  </div>
+
+<!-- Footer -->
+
+<section class="footer-section about">
+
+    <footer>
+        <p>Turning ideas into reality with creative solutions 🖥️. © 2025 Artemis. All rights reserved.</p>
+    </footer>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+ <script>
+    // Select navbar and collapse div
+    const navbar = document.querySelector('nav.navbar');
+    const collapseMenu = document.getElementById('navbarCollapse');
+
+    collapseMenu.addEventListener('show.bs.collapse', () => {
+        // When menu opens, increase navbar height
+        navbar.style.height = '300px';  // set your desired expanded height
+    });
+
+    collapseMenu.addEventListener('hide.bs.collapse', () => {
+        // When menu closes, reset navbar height
+        navbar.style.height = '150px';  // original navbar height
+    });
+
+</script>   
+
+</body>
+  
+</html>

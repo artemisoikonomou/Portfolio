@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How to Run This Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+    pre {
+      background-color: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+    }
+    li{
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>The Artemis Bookshelf</h1>  
+   <h2>📚 Description</h2> 
+      <p>This project is a personal book journal web application designed to catalog and reflect on books I've read. 
+        It allows me to write reviews, rate books, and collect favorite quotes — all displayed in a visually calm and cozy
+        interface inspired by personal reading nooks.</p>
+
+  <h2>📚 How to Run the Library Project</h2>
+      <ol>
+        <li><strong>Install Node.js</strong><br>
+          Download and install it from <a href="https://nodejs.org" target="_blank">nodejs.org</a> if you haven't already.
+        </li>
+        
+        <li><strong>Download the project</strong><br>
+          Clone the repo or download and unzip the project folder.
+        </li>
+
+        <li><strong>Open a terminal and navigate to the folder</strong>
+          <pre><code>cd library_project</code></pre>
+        </li>
+
+        <li><strong>Install dependencies</strong><br>
+          Run:
+          <pre><code>npm install</code></pre>
+          This will install:
+          <ul>
+            <li>axios</li>
+            <li>body-parser</li>
+            <li>dotenv</li>
+            <li>ejs</li>
+            <li>express</li>
+            <li>pg</li>
+          </ul>
+        </li>
+		
+
+        <li><strong>Run the project</strong><br>
+          Use:
+          <pre><code>npm start</code></pre>
+          This will run the file <code>server.js</code>.
+        </li>
+      </ol>
+
+  <h2>🗄️ Set Up PostgreSQL Table</h2>
+      <p>Run the following SQL in your PostgreSQL database (e.g., via pgAdmin):</p>
+
+      <h3>Create Table: books</h3>
+      <pre>
+      CREATE TABLE books (
+        id SERIAL PRIMARY KEY,
+        title VARCHAR(100),
+        recomandation INT,
+        summary TEXT,
+        isbn VARCHAR(17)
+      );
+      </pre>
+
+
+      <h3>Create Table: categories</h3>
+      <pre>
+      CREATE TABLE  categories (
+        id SERIAL PRIMARY KEY ,
+        name_of_category TEXT,
+        book_id INTEGER,
+        FOREIGN KEY (book_id) REFERENCES books(id)
+      );
+      </pre>
+
+
+
+      <h3>Create Table: my_opinion</h3>
+      <pre>
+      CREATE TABLE my_opinion (
+        id SERIAL PRIMARY KEY ,
+        personal_opinion TEXT,
+        book_id INTEGER,
+        FOREIGN KEY (book_id) REFERENCES books(id)
+      );
+      </pre>
+
+
+      <h3>Create Table: quotes</h3>
+      <pre>
+      CREATE TABLE quotes (
+        id SERIAL PRIMARY KEY ,
+        quotes TEXT,
+        quotes_id INTEGER,
+        FOREIGN KEY (quotes_id) REFERENCES books(id)
+      );
+      </pre>
+  <h2>📚 See the Library App in Action</h2>
+    <!-- <p>This demo showcases the main features of the Library App, 
+      including browsing books, viewing detailed opinions and quotes, and filtering by categories.</p>
+    <video width="500"  controls>
+      <source src="./library_project.mp4" type="video/mp4">
+    </video> -->
+	<p><a href="https://github.com/artemisoikonomou/Web-library-project.git" target="_blank">🔗 View on GitHub</a></p>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How to Run This Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+      /* margin-top: 50px; */
+    }
+    pre {
+      background-color: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+    }
+    li{
+      padding-bottom: 20px;
+    }
+    .features_added{
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Permalist</h1>  
+   <h2>📚 Description</h2> 
+      <p>This project began as a basic to-do list web application developed during a seminar. The original version included foundational functionality such as:
+          <ul>
+            <li>Adding, editing, and deleting notes</li>
+            <li>Basic CSS for layout and styling</li>
+          </ul>
+          After the seminar, the project was significantly expanded to include several practical and user-focused features, 
+          turning it into a more complete productivity tool.
+
+
+          <h4>✨ Features I Added:</h4> 
+          <ul class="features_added">
+            <li>✅ Progress bar to visually track task completion</li>
+            <li>✅ Add categories when creating notes</li>
+            <li>✅ Filter/view notes by category</li>
+            <li>✅ Flag important notes</li>
+            <li>✅ Login and signup forms (basic user authentication)</li>
+            <li>✅ Timestamps showing when each note was created</li>
+
+          </ul>
+
+          These enhancements transformed a basic to-do list into a more structured and customizable tool for personal task and note management. <br><br>
+
+          The interface remains clean and distraction-free, designed to help users stay focused and organized throughout the day.
+        </p>
+
+  <h2>📚 How to Run the Permalist Project</h2>
+      <ol>
+        <li><strong>Install Node.js</strong> <br> <br>
+          Download and install it from <a href="https://nodejs.org" target="_blank">nodejs.org</a> if you haven't already.
+        </li> 
+        
+        <li><strong>Download the project</strong><br><br>
+          Clone the repo or download and unzip the project folder.
+        </li>
+
+        <li><strong>Open a terminal and navigate to the folder</strong><br><br>
+          <pre><code>cd permalist</code></pre>
+        </li>
+
+        <li><strong>Install dependencies</strong><br>
+          Run:
+          <pre><code>npm install</code></pre>
+          This will install:
+          <ul>
+            <li>bcrypt</li>
+            <li>body-parser</li>
+            <li>dotenv</li>
+            <li>ejs</li>
+            <li>express</li>
+            <li>express-session</li>
+            <li>pg</li>
+          </ul>
+        </li>
+
+        <li><strong>Run the project</strong><br>
+          Use:
+          <pre><code>npm start</code></pre>
+          This will run the file <code>index.js</code>.
+        </li>
+      </ol>
+
+  <h2>🗄️ Set Up PostgreSQL Table</h2>
+      <p>Run the following SQL in your PostgreSQL database (e.g., via pgAdmin):</p>
+
+      <h3>Create Table: items</h3>
+      <pre>
+        CREATE TABLE items (
+          id SERIAL PRIMARY KEY,
+          title VARCHAR(100) NOT NULL,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          importance VARCHAR(20) DEFAULT 'Medium',
+          user_id INTEGER,
+          category VARCHAR(100)
+        );
+      </pre>
+
+
+      <h3>Create Table: users</h3>
+      <pre>
+        CREATE TABLE users (
+          id SERIAL PRIMARY KEY,
+          username VARCHAR(255) NOT NULL UNIQUE,
+          password VARCHAR(255)
+        );
+      </pre>
+
+
+
+      <h3>Create Table: deleted_items</h3>
+      <pre>
+        CREATE TABLE deleted_items (
+          id SERIAL PRIMARY KEY,
+          deleteditems INTEGER
+        );
+      </pre>
+
+  <h2>📚 See the Permalist App in Action</h2>
+    <!-- <p>This demo showcases the main features of the Permalist App, 
+      including browsing books, viewing detailed opinions and quotes, and filtering by categories.</p>
+    <video width="500"  controls>
+      <source src="./permalist.mp4" type="video/mp4">
+    </video> -->
+    <p><a href="https://github.com/artemisoikonomou/Web-permalist.git" target="_blank">🔗 View on GitHub</a></p>
+
+</body>
+</html>

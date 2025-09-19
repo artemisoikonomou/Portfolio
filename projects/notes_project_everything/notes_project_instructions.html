@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How to Run This Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+      /* margin-top: 50px; */
+    }
+    pre {
+      background-color: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+    }
+    li{
+      padding-bottom: 20px;
+    }
+    .features_added{
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Now I See – A Reflective Journal Web App</h1>  
+
+  <h2>📚 Description</h2> 
+  <p>
+    Now I See is a minimalist journaling app designed to help users capture and explore their thoughts.  
+    When a thought arises, the app encourages looking deeper into its meaning or origin.  
+    By recording these insights, users can organize them, revisit them later, and track their personal growth over time.
+  </p>
+
+  <h2>📚 How to Run the Now I See Project</h2>
+  <ol>
+    <li><strong>Install Node.js</strong><br><br>
+      Download and install it from <a href="https://nodejs.org" target="_blank">nodejs.org</a> if you haven't already.
+    </li> 
+    
+    <li><strong>Download the project</strong><br><br>
+      Clone the repo or download and unzip the project folder.
+    </li>
+
+    <li><strong>Open a terminal and navigate to the folder</strong><br><br>
+      <pre><code> cd notes_project</code></pre>
+    </li>
+
+    <li><strong>Install dependencies</strong><br>
+      Run:
+      <pre><code>npm install</code></pre>
+      This will install:
+      <ul>
+        <li>bcrypt</li>
+        <li>body-parser</li>
+        <li>dotenv</li>
+        <li>ejs</li>
+        <li>express</li>
+        <li>express-session</li>
+        <li>pg</li>
+        <li>passport</li>
+        <li>passport-local</li>
+      </ul>
+
+    </li>
+
+    <li><strong>Run the project</strong><br>
+      Use:
+      <pre><code>npm start</code></pre>
+      This will run the file <code>server.js</code>.
+    </li>
+  </ol>
+
+  <h2>🗄️ Set Up PostgreSQL Tables</h2>
+  <p>Run the following SQL in your PostgreSQL database (e.g., via pgAdmin):</p>
+
+  <h3>Create Table: users</h3>
+  <pre>
+  CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+  );
+  </pre>
+
+  <h3>Create Table: thoughts</h3>
+  <pre>
+  CREATE TABLE thoughts (
+    id SERIAL PRIMARY KEY,
+    thought TEXT NOT NULL,
+    response TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    user_id INTEGER REFERENCES users(id)
+  );
+  </pre>
+
+  <h2>📚 See the Now I See App in Action</h2>
+  <!-- <p>
+    This demo showcases writing journal entries, tagging moods, searching past reflections, 
+    and enjoying a calm, focused journaling space.
+  </p>
+  <video width="500" controls>
+    <source src="./notes_project.mp4" type="video/mp4">
+  </video> -->
+  <p><a href="https://github.com/artemisoikonomou/Web-notes-project.git" target="_blank">🔗 View on GitHub</a></p>
+
+
+</body>
+</html>

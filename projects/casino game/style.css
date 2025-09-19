@@ -1,0 +1,389 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.background{
+    background-image: url("pictures/forrest.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    margin: 0; /* Removes default body margin */
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINS EVERYTHING THAT I USE TO PLAY THE GAME */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* MAIN TITLE OF THE GAME */
+h1{
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    font-family: "Trade Winds", serif;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    margin: 0px;
+}
+
+/* THIS IS THE MESSAGE THAT IS SHOWN WHEN THE PLAYER WINS OR LOSES */
+.message-win-lose{
+    
+    font-size: 35px;
+    font-family: "Trade Winds", serif;
+    color: #DBB42C;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    margin: 0px 0px 20px 0px;
+
+    visibility: hidden;
+}
+
+/* COLUMNS THAT RUNS THE FRUIT */
+.column{
+    width: 200px;
+    height: 415px;
+    box-shadow: 1px 1px 12px 7px #e3e6ea;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.2); /* Black color with transparency */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+/* THIS IS THE BOX AROUND ITS FRUIT INSIDE THE COLUMNS */
+.slot-item{
+    height: 105px;
+    width: 200px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+/* CONATAINS TH THREE BARS THAT RUN THE FRUITS */
+.columns-container{
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+
+/* DOWN BAR WHERE YOU CAN ADD BET ,YOU CAN SPIN AND YOU CAN SEE YOUR WINS */
+.money-container{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+@media(max-width:1118px){
+    .money-container{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content:center;
+        align-items: flex-start;
+    }
+}
+
+/* CONTAINS EVERYTHING ABOUT BET */
+.add-bet-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+/* TITLES FOR BET AND WIN */
+h2{
+    font-family: "Trade Winds", serif;
+    font-size: 25px;
+    margin-top: 60px;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* CONTAINS MINUS AND PLUS SYMBOL AND BOX WHERE YOU CAN SEE WHAT YOU BET */
+.plus-minus-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SHOWS THE PICTURES OR IMG OF PLUS AND MINUS */
+.plus-minus-container img{
+    width: 50px;
+    height: 50px;
+}
+
+.plus-minus-container img:hover{
+    cursor: pointer;
+}
+
+/* IT IS THE BOX THAT SHOWS HOW MUCH WE BET */
+.bet-box{
+    width: 80px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #e3e6ea;
+    font-family: "Knewave", serif;
+    font-weight: lighter;
+    font-size: large;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* THIS CLASS IS USED IN JAVASCRIPT WHEN I CLICK ON THE BUTTON PLUS AND MINUS TO BECOME SMALLER */
+.plus-minus-container .small-size{
+    width: 40px;
+    height: 40px;
+}
+
+
+/* PRESET BET BUTTONS 0,10,20,50,100 */
+
+/* CONTAINS ALL THE PRESET BET BUTTONS LIKE 0,10,20,50,100 */
+.preset-bet-buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* STYLING OF ALL THE BUTTON */
+.preset-bet-buttons{
+    background-color: #3b834b;
+    color: white;
+    border-radius: 25px;
+    width: 60px;
+    height: 50px;
+    border-style: none;
+    cursor: pointer;
+
+    font-family: "Sriracha", serif;
+    font-size: 20px;
+}
+
+.preset-bet-buttons:hover{
+    background-color: #5ba778;
+    cursor: pointer;
+}
+
+
+/* SPIN BUTTON */
+.spin-button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: "Trade Winds", serif;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* THIS IS A MESSAGE THAT WILL APPEAR WHEN THE PLAYER HAVE NOT PUT ANY BET THAT TELLS THEM TO PUT */
+.spin-button-message{
+    visibility: hidden;
+}
+
+/* THIS IS THE SPIN BUTTON */
+.spin-button{
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    border-style: none;
+    font-family: "Trade Winds", serif;
+    font-size: 25px;
+    background-color: #3b834b;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.spin-button:hover{
+    background-color: #5ba778;
+    cursor: pointer;
+}
+/* THIS IS USED FOR WHEN I CLICK THE SPIN BUTTON TO CHANGE THE SIZE TO SMALLER IS USED IN JAVASCRIPT */
+.spin-button-size{
+    width: 80px;
+    height: 80px;
+    font-size: 15px;
+}
+
+
+/* WIN BOX */
+
+/* THIS CONTAINS EVERYTHING ABOUT THE WIN BOX */
+.win-money-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* THISIS THE WIN BOX */
+.win-box{
+    width: 80px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #e3e6ea;
+    font-family: "Knewave", serif;
+    font-weight: lighter;
+    font-size: large;
+    color: black;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PAYTABLE */
+
+/* THIS CONTAINS EVERYTHING ABOUT THE BUTTON PAYTABLE */
+.paytable-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* THIS IS THE BUTTON PAYTABLE */
+.paytable{
+    background-color: #3b834b;
+    color: white;
+    border-radius: 25px;
+    width: 100px;
+    height: 80px;
+    border-style: none;
+    cursor: pointer;
+
+    font-family: "Sriracha", serif;
+    font-size: 20px;
+
+    margin-top: 70px;
+    margin-left: 70px;
+}
+
+.paytable:hover{
+    background-color: #5ba778;
+    cursor: pointer;
+}
+
+
+/* PAYTABLE VIDEO */
+
+/* THIS CONTAINS EVERYTHING ABOUT THE VIDEO THAT SHOWS THE PAYTABLE VALUES */
+.paytable-video-container{
+    position: absolute;
+    margin-bottom: 550px;
+    z-index: 1;
+   
+}
+
+/* THISIS A BIG BOX THAT CONTAINS THE VIDEO AND THEN ALL THE FRUITS THE VALUES */
+.video-container {
+    position: relative;
+    visibility: hidden;
+}
+
+/* THIS CLASS IS ABOUT THE VIDEO AND ONLY  */
+.paper-unfolled{
+    height: 850PX;
+    width: 900px;
+    margin-top: 550px;
+}
+
+/* THIS IS A BIG BOX THAT CONTAINS THE TITLE PAYTABLE ,THE FRUITS , THEIR VALUES AND THE OK */
+.fruits-overlay {
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Sriracha", serif;
+    font-size: 15px;
+    text-align: center;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* THIS CONTAINS THE TWO BOXES OF THE FRUITS */
+.fruits-paytable{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* THIS THE SIZE OF THE FRUITS INSIDE THE PAYTABLE */
+.paytable-image{
+    width: 30px;
+    height: 30px;
+}
+
+/* THIS IS THE OK BUTTON INSIDE THE PAYTABLE */
+.ok-button{
+
+    border: 4px solid white;
+    width: 40px;
+    height: 30px;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* THE FOLLOWING CLASSES ARE USED FOR THE SPIN BUTTON AND BET BUTTON BECAUSE THE WEAR COVERED FROM THE VIDEO AND THEY COULDN'T WORK */
+.spin-button-container {
+    z-index: 1; /* Ensure spin button is above the overlay */
+}
+
+.add-bet-container{
+    z-index: 1;
+}
+
+/* THE FOLLOWING CLASS IS USED IN JAVASCRIPT FOR CHANGES WITH THIS CLASS  WHEN THE PLAYER I CHANGE THE SIZE OF THE MIDDLE FRUITS FROM ALL THE COLUMNS TO SOMETHING BIGGER */
+.win-img-size{
+    height: 250px;
+}
