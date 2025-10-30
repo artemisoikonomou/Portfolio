@@ -9,7 +9,6 @@
       padding: 2rem;
       background-color: #f9f9f9;
       line-height: 1.6;
-      /* margin-top: 50px; */
     }
     pre {
       background-color: #eee;
@@ -25,6 +24,25 @@
     }
     .features_added{
       list-style: none;
+    }
+
+    .screenshot-container , .screenshot-paragraph{
+      text-align: center;
+    }
+
+    .screenshot{
+      width: 1000px;
+      height: 500px;
+      padding-top: 100px;
+    }
+
+
+    .screenshot:first-of-type{
+      padding-top: 20px;
+    }
+    
+    .link-github{
+      padding-top: 20px;
     }
   </style>
 </head>
@@ -128,10 +146,40 @@
           deleted_count INTEGER DEFAULT 0
         );
       </pre>
+
   <h2>📚 See the Permalist App in Action</h2>
-    <!-- <p>This demo showcases the main features of the Permalist App, 
+    <p>This demo showcases the main features of the Permalist App, 
       including browsing books, viewing detailed opinions and quotes, and filtering by categories.</p>
-    <video width="500"  controls>
+
+    <div class="screenshot-container">
+
+        <img src="./screenshots-permalist-project/picture1.png" alt="A screenshot of the login page" class="screenshot">
+        <p class="screenshot-paragraph">(The login page)</p>
+
+        <img src="./screenshots-permalist-project/picture2.png" alt="A screenshot of the sign up" class="screenshot">
+        <p class="screenshot-paragraph">(The sign up page)</p>
+
+        <img src="./screenshots-permalist-project/picture3.png" alt="A screenshot of the main page before anything is added" class="screenshot">
+        <p class="screenshot-paragraph">(This is a display of the main page before anything is added)</p>
+
+        <img src="./screenshots-permalist-project/picture4.png" alt="A screenshot that shows an example of adding something new to the list" class="screenshot">
+        <p class="screenshot-paragraph">(This is an example of adding something new to the list)</p>
+
+        <img src="./screenshots-permalist-project/picture4.1.png" alt="A screenshot of when I choose the category that I want to add the new item and then I press the plus button" class="screenshot">
+        <p class="screenshot-paragraph">(Then I choose the category that I want to add the item and then I press the plus button)</p>
+        
+        <img src="./screenshots-permalist-project/picture4.2.png" alt="A screenshot of the end resultafter an item was added" class="screenshot">
+        <p class="screenshot-paragraph">(And this will be the end result)</p>
+
+        <img src="./screenshots-permalist-project/picture5.png" alt="A screenshot that displays how the edit button works" class="screenshot">
+        <p class="screenshot-paragraph">(This is a display of how the edit button works)</p>
+
+        <img src="./screenshots-permalist-project/picture6.png" alt="A screenshot that shows a pop up that is used for when the list is empty which means all tasks are complete " class="screenshot">
+        <p class="screenshot-paragraph">(This pop up is used when the list is empty which means all tasks are complete)</p>
+
+    </div>
+
+    <!-- <video width="500"  controls>
       <source src="./permalist.mp4" type="video/mp4">
     </video> -->
     <p><a href="https://github.com/artemisoikonomou/Web-permalist.git" target="_blank">🔗 View on GitHub</a></p>
